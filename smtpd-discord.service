@@ -1,0 +1,12 @@
+[Unit]
+Description=Simple SMTP daemon for discord
+Conflicts=postfix.service sendmail.service exim4.service
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/opt/discord-api/.venv/bin/python3 /opt/discord-api/smtpd.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

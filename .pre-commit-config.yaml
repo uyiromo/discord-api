@@ -1,0 +1,33 @@
+repos:
+  - repo: https://github.com/uyiromo/git-hooks
+    rev: v1.1
+    hooks:
+      - id: markdownlint-fix
+      - id: markdownlint
+      - id: black
+      - id: isort
+      - id: flake8
+      - id: mypy
+      - id: shfmt
+      - id: shellcheck
+      - id: shchk
+      - id: taplo-format
+      - id: taplo-lint
+      - id: yamlfmt
+      - id: yamllint
+      - id: js-beautify
+      - id: eslint/json
+      - id: eslint-fix
+      - id: eslint
+      - id: hadolint
+      - id: emoji
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: ['--fix=lf']
+      - id: no-commit-to-branch
+        args: ['--branch', 'main']
+      - id: trailing-whitespace
